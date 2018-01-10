@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'toxme'
+require 'thor'
+
+class ToxmeCLI < Thor
+  desc 'id NAME', 'lookup a name'
+  def id(name)
+    puts Toxme.id(name)
+  end
+
+  desc 'name ID', 'reverse lookup an id'
+  def name(id)
+    puts Toxme.name(id)
+  end
+end
+
+ToxmeCLI.start
+
